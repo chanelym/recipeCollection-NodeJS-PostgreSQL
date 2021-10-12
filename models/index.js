@@ -1,6 +1,7 @@
-const database = require('./../database');
+const { Sequelize, Datatypes } = require('sequelize');
+const database = require('../database');
 
-const worldMenu = database.define('world_menu', {
+const worldMenu = database.sequelize.define('recipes', {
   recipe_id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -8,11 +9,11 @@ const worldMenu = database.define('world_menu', {
     primaryKey: true,
   },
   recipe_name: {
-    type: Sequelize.VARCHAR,
+    type: Sequelize.STRING,
     allowNull: false,
   },
   recipe_cuisine: {
-    type: Sequelize.VARCHAR,
+    type: Sequelize.STRING,
     allowNull: false,
   },
   recipe_history: {
@@ -31,6 +32,11 @@ const worldMenu = database.define('world_menu', {
     type: Sequelize.TEXT,
     allowNull: false,
   },
+},{
+  freezeTableName: true,
+  timestamps: false,
+  createdAt: false,
+  updatedAt: false,
 });
 
 module.exports = worldMenu;

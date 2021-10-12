@@ -7,30 +7,41 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="/img/favicon.png" rel="icon" type="image/x-icon" />
     <!-- Favicon by: https://www.flaticon.com/authors/becris -->
-    <title>Document</title>
+    <title>Recipes Arround the World</title>
 </head>
 <body>
-
-    
-
-        <section class="card-container">
-            <section class="card u-clearfix">
-
-              <section class="card-body">
-                <span class="card-number card-circle subtle">01</span>
-                <span class="card-author subtle">John Smith</span>
-                <h2 class="card-title">New Brunch Recipe</h2>
-                <span class="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
-                <section class="card-read">Read</section>
-                <span class="card-tag card-circle subtle">C</span>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Recipes</a>
+        </li>
+        <li>
+          <a href="/form">New Recipe</a>
+        </li>
+        <li>
+          <a href="/details">Edit/Remove Recipe</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="closed" id="container">
+      <section class="card-container">
+        <section class="card u-clearfix">
+          <section class="card-body">
+            <span class="card-number card-circle subtle">01</span>
+            <h2 class="card-title">New Brunch Recipe</h2>
+            <span class="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
+            <section id="toggle">
+              <section class="card-read title">Recipe Details </section>
+                <article style="overflow: auto; height: 400px">
+                  Teste
+                </article>
               </section>
-
-              <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
             </section>
-
-            <section class="card-shadow"></section>
-          </section>
-    
-
+        <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
+        </section>
+      <section class="card-shadow"></section>
+      </section>
+    </section>
+  <script src="/js/script.js"></script>
 </body>
 </html>
