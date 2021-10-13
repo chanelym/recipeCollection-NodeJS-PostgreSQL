@@ -1,0 +1,137 @@
+/* Navigation Menu */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    z-index: 10;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+}
+
+/* Styling HTML Details Page */
+
+html {
+  background: #FAF7F2;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#card-container {
+  background: #ededed;
+  box-shadow: 0px 0px 200px #999;
+  font-family: 'Oxygen', sans-serif;
+  margin: 25px auto 0;
+  position: relative;
+  width: 692px;
+}
+
+#card-title {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  background: #455560;
+  padding: 15px 20px;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+
+#details {
+  background: #fff;
+  border-left: solid 1px #ededed;
+  border-right: solid 1px #ededed;
+  font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
+  padding: 15px 20px;
+}
+
+.detail-value {
+  color: #455560;
+}
+
+#card-items {
+  background: #ededed;
+  font-family: 'Oxygen', sans-serif;
+  padding: 20px
+}
+
+.card-item-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+ul.checkmark li:before {
+    color: #455560;
+    content:"\2713\0020";
+    font-weight: 600;
+    margin-left: -38px;
+    margin-right: 10px;
+}
+
+.checkmark li {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+#method {
+  background: #fff;
+  border-left: solid 1px #ededed;
+  border-right: solid 1px #ededed;
+  border-bottom: solid 1px #ededed;
+  padding: 20px;
+}
+
+#method li {
+  list-style-position: inside;
+  margin-bottom: 10px;
+  margin-left: -38px;
+  list-style-type: none;
+}
+
+#recipe-image {
+  background: url('https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80');
+  overflow: hidden;
+  height: 450px;
+  background-size: cover;
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol > li {
+  counter-increment: item;
+}
+
+ol > li::before {
+  font-weight: bold;
+  content: counter(item) ".";
+  margin-right: 8px;
+}

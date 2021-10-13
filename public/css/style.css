@@ -1,177 +1,126 @@
 /* Navigation Menu */
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-    z-index: 10;
-    font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  z-index: 10;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 nav ul li {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: 0.5s;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
 }
 
 nav ul li a:hover {
-    color: #aaa;
+  color: #aaa;
 }
 
-/* Styling HTML */
+/* Styling HTML Main Page */
 
-body {
-    background: #FAF7F2;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+html {
+  background: #FAF7F2;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
- 
+
 *, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
-
-/* Card Background */
 
 .u-clearfix:before,
 .u-clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
-  
+
 .u-clearfix:after {
-    clear: both;
+  clear: both;
 }
-  
+
 .u-clearfix {
-    *zoom: 1;
-}
-
-/* Styling Card Container */
-  
-.card-container {
-    margin: 50px auto 50px;
-    position: relative;
-    width: 692px;
-}
-
-/* Styling Card */
-  
-.card {
-    background-color: #fff;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(75, 75, 75, .07);
-    z-index: 1;
-}
-  
-.card-body {
-    display: inline-block;
-    /* float: left; */
-    width: 310px;
-}
-  
-.card-number {
-    margin-top: 15px;
-}
-  
-.card-circle {
-    display: inline-block;
-    line-height: 30px;
-    font-size: 20px;
-    height: 25px;
-    text-align: center;
-    width: 25px;
-    margin: 10px 0; 
+  *zoom: 1;
 }
 
 .subtle {
-    color: #aaa;
+  color: #aaa;
 }
-  
+
+.card-container {
+  box-shadow: 0px 0px 200px #999;
+  margin: 25px auto 0;
+  position: relative;
+  width: 692px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, .07);
+  z-index: 1;
+}
+
+.card-body {
+  display: inline-block;
+  width: 100%;
+}
+
 .card-title {
-    display: inline-block;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 30px;
-    height: 25px;
-    text-align: center;
-    margin: 10px 0; 
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
 }
-  
+
 .card-description {
-    display: inline-block;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 10px 0;
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
 }
-  
-.card-tag {
-    float: right;
-    margin: 5px 0 0;
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-top: 140px;
+  /* margin: 5px 0 20px; */
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
 }
-  
+
 .card-media {
-    float: right;
+  object-fit: scale-down;
+  width: 100%;
+  height: 50%;
 }
-  
+
 .card-shadow {
-    background-color: #fff;
-    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
-    height: 1px;
-    margin: -1px auto 0;
-    width: 80%;
-    z-index: -1;
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
 }
-
-/* Card Toggle */
-
-#toggle { 
-    cursor: pointer; 
-} 
-       
-#toggle.card-read:before {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 6px;
-    margin: 5px 0 20px;
-    text-align: right;
-    text-transform: uppercase;
-}      
-      
-#toggle.card-read:after {
-    cursor: pointer;
-    background-color: #b8bddd;
-    display: block;
-    height: 1px;
-    position: absolute;
-    top: 9px;
-    width: 75%;
-}
-
-article {
-    padding: 25px 30px;
-    overflow: hidden;
-    max-height: 400px;
-} 
-       
-#container.closed article {
-    max-height: 0px;
-    padding: 0 30px;
-}    
