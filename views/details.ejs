@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <link rel="stylesheet" href="/css/details.css">
     <link href="/img/favicon.png" rel="icon" type="image/x-icon" />
     <!-- Favicon by: https://www.flaticon.com/authors/becris -->
@@ -16,40 +16,32 @@
         <a href="/">Recipes</a>
       </li>
       <li>
-        <a href="/form">New Recipe</a>
+        <a href="/edit/<%= menu.recipe_id %>">Edit This Recipe</a>
+      </li>
+      <li>
+        <a href="/delete/<%= menu.recipe_id %>">Delete Recipe</a>
       </li>
     </ul>
   </nav>
 
-    <section id="card-container">
-      <section id="card-title"><%= menu.recipe_name %></section>
-       <section id="recipe-image"></section>
-      
-      <section id="card-items">
-        <span class="checkmark" class="card-item-title"><%= menu.recipe_ingredients %></span>
-        <!-- <ul class="checkmark">
-          <li>2 to 3 very ripe bananas, peeled</li>
-          <li>1/3 cup melted butter</li>
-          <li>1 teaspoon baking soda</li>
-          <li>Pinch of salt</li>
-          <li>3/4 cup sugar (1/2 cup if you would like it less sweet, 1 cup if more sweet)</li>
-          <li>1 large egg, beaten</li>
-          <li>1 teaspoon vanilla extract</li>
-          <li>1 1/2 cups of all-purpose flour</li>
-        </ul> -->
-      </section>
-      
-      <section id="method">
-      <span class="card-item-title"><%= menu.recipe_prep_method %></span>
-        <!-- <ol>
-          <li>Preheat the oven to 350°F (175°C), and butter a 4x8-inch loaf pan.</li>
-    <li>In a mixing bowl, mash the ripe bananas with a fork until completely smooth. Stir the melted butter into the mashed bananas.</li>
-    <li>Mix in the baking soda and salt. Stir in the sugar, beaten egg, and vanilla extract. Mix in the flour.</li>
-    <li>Pour the batter into your prepared loaf pan. Bake for 50 minutes to 1 hour at 350°F (175°C), or until a tester inserted into the center comes out clean.</li>
-    <li>Remove from oven and let cool in the pan for a few minutes. Then remove the banana bread from the pan and let cool completely before serving. Slice and serve. (A bread knife helps to make slices that aren't crumbly.)</li>
-    </ul> -->
-      </section>
+  <section class="card-container">
+    <section class="card-title"><%= menu.recipe_name %></section>
+     <section class="recipe-image"><img src="<%= menu.recipe_image_url %>"></section>
+    
+    <section class="card-items">
+      <span class="card-item-title">Ingredients</span>
+      <ul class="checkmark">
+        <li><%= menu.recipe_ingredients %></li>
+      </ul>
     </section>
+    
+    <section class="method">
+    <span class="card-item-title">Method</span>
+      <ol>
+        <li><%= menu.recipe_prep_method %></li>
+      </ol>
+    </section>
+  </section>
     
   <script src="/js/script.js"></script>
 </body>

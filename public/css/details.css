@@ -1,3 +1,7 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 /* Navigation Menu */
 
 nav {
@@ -6,7 +10,7 @@ nav {
     justify-content: right;
     width: 100%;
     z-index: 10;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'PT Serif', serif;
 }
 
 nav ul {
@@ -36,22 +40,22 @@ nav ul li a:hover {
 html {
   background: #FAF7F2;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'PT Serif', serif;
   font-size: 14px;
   font-weight: 400;
 }
 
-#card-container {
+.card-container {
   background: #ededed;
-  box-shadow: 0px 0px 200px #999;
-  font-family: 'Oxygen', sans-serif;
+  box-shadow: 0 0 5px rgba(75, 75, 75, .07);
+  font-family: 'PT Serif', serif;
   margin: 25px auto 0;
   position: relative;
   width: 692px;
 }
 
-#card-title {
-  font-family: 'Oxygen', sans-serif;
+.card-title {
+  font-family: 'PT Serif', serif;
   font-weight: 700;
   font-size: 25px;
   background: #455560;
@@ -60,22 +64,9 @@ html {
   border-radius: 2px 2px 0 0;
 }
 
-#details {
-  background: #fff;
-  border-left: solid 1px #ededed;
-  border-right: solid 1px #ededed;
-  font-size: 16px;
-  font-family: 'Oxygen', sans-serif;
-  padding: 15px 20px;
-}
-
-.detail-value {
-  color: #455560;
-}
-
-#card-items {
+.card-items {
   background: #ededed;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'PT Serif', serif;
   padding: 20px
 }
 
@@ -100,7 +91,7 @@ li {
   margin-bottom: 3px;
 }
 
-#method {
+.method {
   background: #fff;
   border-left: solid 1px #ededed;
   border-right: solid 1px #ededed;
@@ -108,15 +99,14 @@ li {
   padding: 20px;
 }
 
-#method li {
+.method li {
   list-style-position: inside;
   margin-bottom: 10px;
   margin-left: -38px;
   list-style-type: none;
 }
 
-#recipe-image {
-  background: url('https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80');
+.recipe-image {
   overflow: hidden;
   height: 450px;
   background-size: cover;

@@ -22,18 +22,16 @@
     </ul>
   </nav>
 
-  <% menu.forEach((menu, find) => { %>
-    <section class="card-container">
-      <section class="card u-clearfix">
+  <section class="card-container">
+    <% menu.forEach((menu, find) => { %>
+    <section class="card u-clearfix">
       <img src="<%= menu.recipe_image_url %>" alt="" class="card-media"/>
-        <section class="card-body">
-          <h2 class="card-title"><%= menu.recipe_name %></h2>
-          <span class="card-description subtle"><%= menu.recipe_history %></span>
-          <a href="/details/<%= menu.recipe_id %>"><section class="card-read">Recipe Details</a></section>
-          </section>
-        </section>
-      <section class="card-shadow">
+      <section class="card-body">
+        <h2 class="card-title"><%= menu.recipe_name %></h2>
+        <span class="card-description subtle"><%= menu.recipe_history %></span>
+        <a href="/details/<%= menu.recipe_id %>"><section class="card-read">Recipe Details</a></section>
     </section>
+  </section>
   <% }) %>
 
   <script src="/js/script.js"></script>
