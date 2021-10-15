@@ -22,6 +22,12 @@
     </ul>
   </nav>
 
+  <% if(message != "") {  %>
+    <section class="message">
+        <p><%= message %></p> <span class="close">&times;</span>
+    </section>
+  <% }  %>
+
   <section class="card-container">
     <% menu.forEach((menu, find) => { %>
     <section class="card u-clearfix">

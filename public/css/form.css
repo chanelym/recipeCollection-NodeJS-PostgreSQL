@@ -106,6 +106,13 @@ li {
   list-style-type: none;
 }
 
+.recipe-image {
+  padding: 15px 20px;
+  overflow: hidden;
+  /* height: 450px; */
+  background-size: cover;
+}
+
 ol {
   counter-reset: item;
 }
