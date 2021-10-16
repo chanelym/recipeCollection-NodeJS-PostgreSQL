@@ -28,40 +28,42 @@
         
         <section class="inside-card">
             <label for="recipe_name">Name:</label>
-            <textarea type="text" name="recipe_name" required></textarea>
+            <textarea type="text" name="recipe_name" required><%= menu.recipe_name %></textarea>
             <span class="underline"></span>
         </section>
 
         <section class="inside-card">
             <label for="recipe_cuisine">Country:</label>
-            <textarea type="text" name="recipe_cuisine" required></textarea>
+            <textarea type="text" name="recipe_cuisine" required><%= menu.recipe_cuisine %></textarea>
         </section>
 
         <section class="inside-card">
             <label for="recipe_history">History:</label>
-            <textarea type="text" name="recipe_history" required></textarea>
+            <textarea type="text" name="recipe_history" required><%= menu.recipe_history %></textarea>
         </section>
 
         <section class="inside-card">
             <label for="recipe_image_url">Image:</label>
-            <textarea type="text" name="recipe_image_url" required></textarea>
+            <textarea type="text" name="recipe_image_url" required><%= menu.recipe_image_url %></textarea>
         </section>
           
         <section class="inside-card">
             <label for="recipe_ingredients">Ingredients:</label>
-            <textarea type="text" name="recipe_ingredients" required></textarea>
+            <textarea type="text" name="recipe_ingredients" required><%= menu.recipe_ingredients %></textarea>
         </section>
          
         <section class="inside-card">
             <label for="recipe_prep_method">Prep Method:</label>
-            <textarea type="text" name="recipe_prep_method" required></textarea>
+            <textarea type="text" name="recipe_prep_method" required ><%= menu.recipe_prep_method %></textarea>
         </section>
+
+        <input type="hidden" name="recipe_id" value="<%= menu.recipe_id%>">
         
         <button type="submit">Let's Cook!</button>
         
     </section>
     </form>
-    <script src="/js/script.js"></script>
+    
 
 </body>
 </html>

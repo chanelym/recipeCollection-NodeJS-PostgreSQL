@@ -14,7 +14,7 @@
   <nav>
     <ul>
       <li>
-        <a href="/">Recipes</a>
+        <a href="/about">About Us!</a>
       </li>
       <li>
         <a href="/form">New Recipe</a>
@@ -22,11 +22,13 @@
     </ul>
   </nav>
 
-  <% if(message != "") {  %>
-    <section class="message">
-        <p><%= message %></p> <span class="close">&times;</span>
-    </section>
-  <% }  %>
+  <section id="example" class="message-holder">
+    <% if(message != "") {  %>
+      <section id="message">
+        <p><%= message %></p><span id="close">&times;</span>
+      </section>
+    <% }  %>
+  </section>
 
   <section class="card-container">
     <% menu.forEach((menu, find) => { %>
@@ -35,7 +37,7 @@
       <section class="card-body">
         <h2 class="card-title"><%= menu.recipe_name %></h2>
         <span class="card-description subtle"><%= menu.recipe_history %></span>
-        <a href="/details/<%= menu.recipe_id %>"><section class="card-read">Recipe Details</a></section>
+        <a href="/details/<%= menu.recipe_id %>" ><section class="card-read">Recipe Details</a></section>
     </section>
   </section>
   <% }) %>

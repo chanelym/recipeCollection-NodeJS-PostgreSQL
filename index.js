@@ -36,22 +36,94 @@ app.post('/form', async (req, res) => {
 		recipe_image_url 
 	} = req.body;
 
-	const menu = await worldMenu.create({
-		recipe_name: recipe_name,
-		recipe_cuisine: recipe_cuisine, 
-		recipe_history : recipe_history,
-		recipe_ingredients : recipe_ingredients,
-		recipe_prep_method : recipe_prep_method, 
-		recipe_image_url : recipe_image_url
-  	});
+	if (!recipe_name) {
+		res.render('/form', {
+			message : 'Recipe Name is Required'
+		});
+	}
 
-	message = 'New recipe successfully created!'
-	res.redirect('/', );
-});
+	if (!recipe_cuisine) {
+		res.render('/form', {
+			message : 'Recipe Origin is Required',
+		});
+	}
+
+	if (!recipe_history) {
+		res.render('/form', {
+			message : 'Recipe History is Required',
+		});
+	}
+
+	if (!recipe_ingredients) {
+		res.render('/form', {
+			message : 'Recipe Ingredients is Required',
+		});
+	}
+
+	if (!recipe_prep_method) {
+		res.render('/form', {
+			message : 'Recipe Prep Method is Required',
+		});
+	}
+
+	if (!recipe_image_url) {
+		res.render('/form', {
+			message : 'Recipe Pic is Required',
+		});
+	}
+
+	try {
+		const menu = await worldMenu.create({
+			recipe_name: recipe_name,
+			recipe_cuisine: recipe_cuisine, 
+			recipe_history : recipe_history,
+			recipe_ingredients : recipe_ingredients,
+			recipe_prep_method : recipe_prep_method, 
+			recipe_image_url : recipe_image_url
+		})
+
+	res.redirect('/');  
+	} catch (err) {    
+		console.log(err);    
+		
+		res.redirect('/', {      
+		message : 'We Have a Problem!',    
+	});  
+}});
+
 
 app.get('/details/:id', async (req, res) => {  
 	const menu = await worldMenu.findByPk(req.params.id);  
 	res.render('details.ejs', { menu,  });
+});
+
+app.get('/edit/:id', async (req, res) => {
+    const menu = await worldMenu.findByPk(req.params.id);
+    res.render('edit.ejs', { menu : menu, });
+});
+
+app.post('/edit/:id', async (req,res) =>{
+    const menu = await worldMenu.findByPk(req.params.id);
+    const { 
+		recipe_name, 
+		recipe_cuisine, 
+		recipe_history,
+		recipe_ingredients,
+		recipe_prep_method, 
+		recipe_image_url 
+	} = req.body;
+    
+    menu.recipe_name = recipe_name;
+	menu.recipe_cuisine = recipe_cuisine;
+	menu.recipe_history = recipe_history;
+	menu.recipe_ingredients = recipe_ingredients;
+	menu.recipe_prep_method = recipe_prep_method; 
+	menu.recipe_image_url = recipe_image_url;
+
+    await menu.save();
+	message = 'Recipe successfully edited';
+
+    res.redirect('/');
 });
 
 app.get('/delete/:id', async (req, res) => {  
