@@ -78,9 +78,10 @@ app.post('/form', async (req, res) => {
 			recipe_cuisine: recipe_cuisine, 
 			recipe_history : recipe_history,
 			recipe_ingredients : recipe_ingredients,
-			recipe_prep_method : recipe_prep_method, 
+			recipe_prep_method : recipe_prep_method,
 			recipe_image_url : recipe_image_url
-		})
+		}) 
+		message = 'Recipe successfully created';
 
 	res.redirect('/');  
 	} catch (err) {    
@@ -140,6 +141,10 @@ app.get('/delete/:id', async (req, res) => {
 	
 	res.redirect('/', );
 });
+
+app.get('/about' , (req,res) => {
+	res.render('about.ejs', )
+}); 
 
 db.connected();
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
