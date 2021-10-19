@@ -5,7 +5,7 @@ const app = express();
 const db = require('./database');
 const worldMenu = require ('./models');
 const path = require('path');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 let message = '';
 
