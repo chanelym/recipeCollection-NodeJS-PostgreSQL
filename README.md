@@ -1,1 +1,5 @@
 # recipeCollection-NodeJS-PostgreSQL
+
+A simple NodeJS + PostegreSQL + Express.js Website for recipes registration. You can use the website https://www.tasteatlas.com/ to choose one or another.
+
+The main focus was to concatenate the knowledge gained throughout Module 2, which introduced us to the Front-End development stack.
